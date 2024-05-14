@@ -1,0 +1,36 @@
+.perfil__contenedor {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.perfil__contenedor.historia {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.perfil__contenedor.post {
+  flex-direction: row;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.historia .perfil__img__contenedor {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.post .perfil__img__contenedor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.perfil__img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}

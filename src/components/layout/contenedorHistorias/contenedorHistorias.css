@@ -1,0 +1,9 @@
+.contenedor__historias {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  max-width: 640px;
+  margin: 20px auto;
+  padding-bottom: 20px;
+  overflow-x: auto;
+}
