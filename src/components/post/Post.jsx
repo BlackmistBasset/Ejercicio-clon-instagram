@@ -9,8 +9,6 @@ export const Post = ({
   postImg,
   postDescripcion,
 }) => {
-  let count = 2342836;
-
   return (
     <div className="post__container">
       <Perfil
@@ -22,7 +20,7 @@ export const Post = ({
 
       <img src={postImg} alt="Imagen posteo" className="post__img" />
 
-      <Likes liked={true} count={count} />
+      <Likes />
       <p className="post__descripcion"> {postDescripcion}</p>
     </div>
   );
