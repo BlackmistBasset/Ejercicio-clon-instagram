@@ -3,7 +3,10 @@ import "./perfil.css";
 export const Perfil = ({ type, seen, userName, profilePic }) => {
   return (
     <>
-      <div className={`perfil__contenedor ${type}`}>
+      <div
+        className={`perfil__contenedor ${type}`}
+        onClick={() => console.log("Click")}
+      >
         <div
           className="perfil__img__contenedor"
           style={{

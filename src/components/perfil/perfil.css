@@ -2,6 +2,7 @@
   display: flex;
   gap: 15px;
   align-items: center;
+  cursor: pointer;
 }
 
 .perfil__contenedor.historia {
