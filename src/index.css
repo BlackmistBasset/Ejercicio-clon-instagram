@@ -11,4 +11,9 @@ img {
 
 body {
   padding-inline: 20px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+  justify-content: center;
 }
