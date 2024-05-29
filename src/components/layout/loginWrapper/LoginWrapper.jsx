@@ -7,8 +7,8 @@ import { Register } from "../../login/Register";
 import "./loginWrapper.css";
 
 export const LoginWrapper = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userName, setUserName] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [userName, setUserName] = useState("Aldana");
   const [isRegister, setIsRegister] = useState(true);
 
   const handleLogIn = () => {

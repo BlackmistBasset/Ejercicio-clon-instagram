@@ -1,11 +1,11 @@
-nav {
+/* nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 640px;
   margin: auto;
   margin-block: 15px;
-}
+} */
 
 nav button {
   padding: 3px 6px;

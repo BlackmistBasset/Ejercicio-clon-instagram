@@ -16,6 +16,9 @@ export const Login = ({ setIsRegister, setIsLoggedIn }) => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
+    //Formulario no controlado para nada (sin usar estados capturo los valores de los inputs)
+    //console.log(e.target.nombre.value, e.target.contraseña.value);
+
     const datos = {
       usuario: username,
       contraseña: password,
@@ -30,6 +33,13 @@ export const Login = ({ setIsRegister, setIsLoggedIn }) => {
     }
   };
 
+  const handleCheckInput = (e) => {
+    setUserName(e.target.value);
+    if (username === "grito") {
+      setUserName(username.toLocaleUpperCase());
+    }
+  };
+
   return (
     <div>
       <h2>Iniciar sesión</h2>
@@ -39,12 +49,13 @@ export const Login = ({ setIsRegister, setIsLoggedIn }) => {
           <input
             type="text"
             placeholder="Ej: Pepito"
+            autoComplete="off"
             id="nombre"
+            name="nombre"
             value={username}
-            onChange={(e) => {
-              setUserName(e.target.value);
-            }}
+            onChange={handleCheckInput}
           />
+          <p>Nombre tipeado: {username}</p>
         </div>
 
         <div className="input__container">
@@ -52,6 +63,7 @@ export const Login = ({ setIsRegister, setIsLoggedIn }) => {
           <input
             type={typePassword}
             id="contraseña"
+            name="contraseña"
             onChange={(e) => {
               setPassword(e.target.value);
               console.log(password);

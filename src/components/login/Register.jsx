@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import "./login.css";
-
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+
+import "./login.css";
 
 export const Register = ({ setIsRegister, setIsLoggedIn }) => {
   const [username, setUserName] = useState("");
