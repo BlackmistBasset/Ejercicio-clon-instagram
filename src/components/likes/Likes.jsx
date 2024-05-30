@@ -4,7 +4,7 @@ import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 export const Likes = () => {
   const [liked, setLiked] = useState(false);
-  const [cantidadLikes, setCantidadLikes] = useState(1);
+  const [cantidadLikes, setCantidadLikes] = useState(0);
 
   const handleToggleLike = () => {
     console.log("click");

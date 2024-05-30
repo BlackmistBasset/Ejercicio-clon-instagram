@@ -3,7 +3,13 @@ import { NewPostModal } from "../../newPostModal/NewPostModal";
 
 import "./navbar.css";
 
-export const Navbar = ({ userName, setIsLoggedIn }) => {
+export const Navbar = ({
+  userName,
+  setIsLoggedIn,
+  profilePic,
+  setPostsArray,
+  postsArray,
+}) => {
   const handleLogOut = () => {
     setIsLoggedIn(false);
   };
@@ -17,7 +23,12 @@ export const Navbar = ({ userName, setIsLoggedIn }) => {
         py="15px"
       >
         <p>Bienvenido, {userName}</p>
-        <NewPostModal />
+        <NewPostModal
+          userName={userName}
+          setPostsArray={setPostsArray}
+          profilePic={profilePic}
+          postsArray={postsArray}
+        />
         <button onClick={handleLogOut}>Cerrar Sesión</button>
       </HStack>
     </>
