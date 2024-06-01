@@ -21,6 +21,10 @@ import {
 import { MdOutlineAddBox } from "react-icons/md";
 
 import { v4 as uuidv4 } from "uuid";
+import { useForm } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
+
+import { validacionTexto } from "../../utils/validaciones";
 
 export const NewPostModal = ({
   userName,
@@ -28,30 +32,28 @@ export const NewPostModal = ({
   setPostsArray,
   postsArray,
 }) => {
-  const [input, setInput] = useState("");
-
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const handleInputChange = (e) => {
-    setInput(e.target.value);
-  };
-
-  const isError = input === "";
-
-  const handleSubmitNewPost = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm({ criteriaMode: "all" });
+  console.log(errors);
+  const onSubmit = (data) => {
+    console.log("objeto que crea la libreria:", data);
+    console.log("submit");
 
     const newPost = {
       seen: false,
       userName: userName,
       profilePic: profilePic,
-      postImg: e.target.imgPost.value,
-      postDescripcion: e.target.descripcionPost.value,
+      postImg: data.postImg,
+      postDescripcion: data.postDescription,
       id: uuidv4(),
     };
 
     const updatedPosts = [...postsArray, newPost];
-
     console.log(updatedPosts);
     setPostsArray(updatedPosts);
     onClose();
@@ -79,20 +81,58 @@ export const NewPostModal = ({
             <VStack
               as="form"
               className="new_post__form"
-              onSubmit={handleSubmitNewPost}
+              onSubmit={handleSubmit(onSubmit)}
             >
-              <FormControl isInvalid={isError}>
+              <FormControl isInvalid={errors.postImg ? true : false}>
                 <FormLabel>Imagen</FormLabel>
                 <Input
                   type="text"
-                  onChange={handleInputChange}
                   name="imgPost"
+                  {...register("postImg", {
+                    required: "este campo es obligatorio",
+                    minLength: {
+                      value: 3,
+                      message: "la url es demasiado corta",
+                    },
+                    maxLength: {
+                      value: 10,
+                      message: "la url es demasiado extensa",
+                    },
+                    pattern: {
+                      value: /\d+/,
+                      message: "Este input acepta solo números",
+                    },
+                  })}
                 />
-                <FormErrorMessage>La imagen es obligatoria</FormErrorMessage>
+                <ErrorMessage
+                  errors={errors}
+                  name="postImg"
+                  render={({ messages }) => {
+                    console.log(messages);
+                    return (
+                      messages &&
+                      Object.entries(messages).map(([type, message]) => (
+                        <FormErrorMessage key={type}>
+                          {message}
+                        </FormErrorMessage>
+                      ))
+                    );
+                  }}
+                />
+                {/* <FormErrorMessage>La imagen es obligatoria</FormErrorMessage> */}
               </FormControl>
-              <FormControl mt="20px">
+              <FormControl
+                mt="20px"
+                isInvalid={errors.postDescription ? true : false}
+              >
                 <FormLabel>Descripción</FormLabel>
-                <Textarea name="descripcionPost" />
+                <Textarea
+                  name="descripcionPost"
+                  {...register("postDescription", { required: true })}
+                />
+                <FormErrorMessage>
+                  La Descripción es obligatoria
+                </FormErrorMessage>
               </FormControl>
               <HStack mb="20px" mt="10px">
                 <Button
