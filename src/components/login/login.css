@@ -3,7 +3,7 @@ h2 {
   margin-bottom: 30px;
 }
 
-form:not(.new_post__form) {
+form:not(.new_post__form, .edit_post__form) {
   border: 1px solid black;
   border-radius: 15px;
   padding: 20px;

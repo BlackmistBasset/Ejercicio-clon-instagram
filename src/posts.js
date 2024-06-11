@@ -35,7 +35,7 @@ export const posts = [
   },
   {
     seen: true,
-    userName: "Juancito",
+    userName: "Raul",
     profilePic: perfilPlaceholder,
     postImg: imgPost2,
     postDescripcion:

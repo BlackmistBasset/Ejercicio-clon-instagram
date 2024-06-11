@@ -8,6 +8,8 @@
 
 .post__descripcion {
   margin-top: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
 }
 
 .post__img--center {
