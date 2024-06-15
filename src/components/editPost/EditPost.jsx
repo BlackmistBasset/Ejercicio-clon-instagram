@@ -1,10 +1,23 @@
-import React from "react";
+import { useRef, useEffect } from "react";
 
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Button, ButtonGroup, Stack } from "@chakra-ui/react";
 import { getPosts, setPosts } from "../../utils/localStorage";
 import "./editPost.css";
 
 export const EditPost = ({ postDescripcion, setIsEdit, setPostsArray, id }) => {
+  const textareaRef = useRef(null);
+
+  useEffect(() => {
+    console.log("Edito un post");
+    textareaRef.current.focus();
+    const length = textareaRef.current.value.length;
+    textareaRef.current.setSelectionRange(length, length);
+
+    return () => {
+      console.log("Se desmonta mi componente editar");
+    };
+  }, []);
+
   const handleCancelEdit = () => {
     setIsEdit(false);
   };
@@ -24,12 +37,15 @@ export const EditPost = ({ postDescripcion, setIsEdit, setPostsArray, id }) => {
     });
     setPostsArray(newPostsArray);
     setPosts(JSON.stringify(newPostsArray));
-    console.log(newPostsArray);
   };
 
   return (
-    <form className="edit_post__form" onSubmit={handleEditPost}>
-      <textarea defaultValue={postDescripcion} name="descripcion"></textarea>
+    <Stack as="form" className="edit_post__form" onSubmit={handleEditPost}>
+      <textarea
+        ref={textareaRef}
+        defaultValue={postDescripcion}
+        name="descripcion"
+      ></textarea>
       <ButtonGroup gap="3" justifyContent="end" display="flex">
         <Button
           onClick={handleCancelEdit}
@@ -39,10 +55,11 @@ export const EditPost = ({ postDescripcion, setIsEdit, setPostsArray, id }) => {
         >
           Cancelar
         </Button>
+
         <Button type="submit" variant="solid" colorScheme="blue" mt="10px">
           Editar
         </Button>
       </ButtonGroup>
-    </form>
+    </Stack>
   );
 };

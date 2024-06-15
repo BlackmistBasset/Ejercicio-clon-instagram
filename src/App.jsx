@@ -6,7 +6,7 @@ import { Post } from "./components/post/Post";
 import { Carrousel } from "./components/carrousel/Carrousel";
 import { Navbar } from "./components/layout/navbar/Navbar";
 import { SlideInfinito } from "./components/slideInfinito/SlideInfinito";
-
+import { Filtros } from "./components/filtros/Filtros";
 import { posts } from "./posts";
 import { getPosts, setPosts } from "./utils/localStorage";
 import perfilPlaceholder from "./assets/michiPerfil.jpg";
@@ -20,10 +20,12 @@ function App({ setIsLoggedIn }) {
   const [postsArray, setPostsArray] = useState(
     getPosts() || setPosts(JSON.stringify(posts))
   );
+
   const handleFilter = () => {
     const filteredArray = postsArray.filter((post) => !post.seen);
     setPostsArray(filteredArray);
   };
+
   return (
     <>
       <Navbar
@@ -33,6 +35,7 @@ function App({ setIsLoggedIn }) {
         setPostsArray={setPostsArray}
         postsArray={postsArray}
       />
+      <Filtros setPostsArray={setPostsArray} postsArray={postsArray} />
       <Carrousel />
       <SlideInfinito />
       <div className="contenedor__posteos" style={{ marginTop: "40px" }}>

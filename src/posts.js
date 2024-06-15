@@ -10,8 +10,16 @@ export const posts = [
     userName: "Pepito",
     profilePic: perfilPlaceholder,
     postImg: imgPost,
-    postDescripcion:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat esse magni odit neque iste asperiores. Ullam, facere numquam vero voluptas praesentium, architecto quidem quo nisi at distinctio id? Labore, porro.",
+    postDescripcion: "Posteo 1 de Pepito",
+    id: uuidv4(),
+  },
+
+  {
+    seen: false,
+    userName: "JACINTA",
+    profilePic: perfilPlaceholder,
+    postImg: imgPost,
+    postDescripcion: "Posteo 1 de Pepito",
     id: uuidv4(),
   },
 
@@ -20,8 +28,7 @@ export const posts = [
     userName: "Juancito",
     profilePic: perfilPlaceholder,
     postImg: imgPost2,
-    postDescripcion:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat esse magni odit neque iste asperiores. Ullam, facere numquam vero voluptas praesentium, architecto quidem quo nisi at distinctio id? Labore, porro.",
+    postDescripcion: "Posteo 1 de Juancito",
     id: uuidv4(),
   },
   {
@@ -29,8 +36,7 @@ export const posts = [
     userName: "Martita",
     profilePic: perfilPlaceholder,
     postImg: imgPost,
-    postDescripcion:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat esse magni odit neque iste asperiores. Ullam, facere numquam vero voluptas praesentium, architecto quidem quo nisi at distinctio id? Labore, porro.",
+    postDescripcion: "Posteo 1 de Martita",
     id: uuidv4(),
   },
   {
@@ -38,8 +44,42 @@ export const posts = [
     userName: "Raul",
     profilePic: perfilPlaceholder,
     postImg: imgPost2,
-    postDescripcion:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat esse magni odit neque iste asperiores. Ullam, facere numquam vero voluptas praesentium, architecto quidem quo nisi at distinctio id? Labore, porro.",
+    postDescripcion: "Posteo 1 de Raul",
+    id: uuidv4(),
+  },
+
+  {
+    seen: true,
+    userName: "Pepito",
+    profilePic: perfilPlaceholder,
+    postImg: imgPost,
+    postDescripcion: "Posteo 2 de Pepito",
+    id: uuidv4(),
+  },
+
+  {
+    seen: false,
+    userName: "Juancito",
+    profilePic: perfilPlaceholder,
+    postImg: imgPost2,
+    postDescripcion: "Posteo 2 de Juancito",
+    id: uuidv4(),
+  },
+  {
+    seen: true,
+    userName: "Martita",
+    profilePic: perfilPlaceholder,
+    postImg: imgPost,
+    postDescripcion: "Posteo 2 de Martita",
+    id: uuidv4(),
+  },
+
+  {
+    seen: true,
+    userName: "Raul",
+    profilePic: perfilPlaceholder,
+    postImg: imgPost2,
+    postDescripcion: "Posteo 2 de Raul",
     id: uuidv4(),
   },
 ];

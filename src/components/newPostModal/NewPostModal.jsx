@@ -39,7 +39,7 @@ export const NewPostModal = ({
     formState: { errors },
     handleSubmit,
   } = useForm({ criteriaMode: "all" });
-  console.log(errors);
+
   const onSubmit = (data) => {
     console.log("objeto que crea la libreria:", data);
     console.log("submit");
