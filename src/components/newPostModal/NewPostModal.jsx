@@ -19,7 +19,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import { MdOutlineAddBox } from "react-icons/md";
-
+import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
@@ -31,6 +31,7 @@ export const NewPostModal = ({
   profilePic,
   setPostsArray,
   postsArray,
+  setUpdateApp,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -53,9 +54,13 @@ export const NewPostModal = ({
       id: uuidv4(),
     };
 
-    const updatedPosts = [...postsArray, newPost];
-    console.log(updatedPosts);
-    setPostsArray(updatedPosts);
+    // const updatedPosts = [...postsArray, newPost];
+    // console.log(updatedPosts);
+    // setPostsArray(updatedPosts);
+
+    axios
+      .post("/posts", newPost)
+      .then((res) => setPostsArray([...postsArray, res.data]));
     onClose();
   };
 
@@ -85,25 +90,7 @@ export const NewPostModal = ({
             >
               <FormControl isInvalid={errors.postImg ? true : false}>
                 <FormLabel>Imagen</FormLabel>
-                <Input
-                  type="text"
-                  name="imgPost"
-                  {...register("postImg", {
-                    required: "este campo es obligatorio",
-                    minLength: {
-                      value: 3,
-                      message: "la url es demasiado corta",
-                    },
-                    maxLength: {
-                      value: 10,
-                      message: "la url es demasiado extensa",
-                    },
-                    pattern: {
-                      value: /\d+/,
-                      message: "Este input acepta solo números",
-                    },
-                  })}
-                />
+                <Input type="text" name="imgPost" {...register("postImg")} />
                 <ErrorMessage
                   errors={errors}
                   name="postImg"

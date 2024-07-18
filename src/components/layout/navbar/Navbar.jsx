@@ -9,6 +9,7 @@ export const Navbar = ({
   profilePic,
   setPostsArray,
   postsArray,
+  setUpdateApp,
 }) => {
   const handleLogOut = () => {
     setIsLoggedIn(false);
@@ -28,6 +29,7 @@ export const Navbar = ({
           setPostsArray={setPostsArray}
           profilePic={profilePic}
           postsArray={postsArray}
+          setUpdateApp={setUpdateApp}
         />
         <button onClick={handleLogOut}>Cerrar Sesión</button>
       </HStack>

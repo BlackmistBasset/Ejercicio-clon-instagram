@@ -1,0 +1,164 @@
+{
+  "posts": [
+    {
+      "seen": false,
+      "userName": "Pepito",
+      "profilePic": "perfilPlaceholder",
+      "postImg": "https://images.unsplash.com/photo-1613564834361-9436948817d1?q=80&w=1943&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "postDescripcion": "Posteo 1 de Pepito",
+      "id": "62d81e8d-a443-4e55-9b69-1a5c4936b844"
+    },
+    {
+      "seen": false,
+      "userName": "JACINTA",
+      "profilePic": "perfilPlaceholder",
+      "postImg": "https://images.unsplash.com/photo-1601924582970-9238bcb495d9?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "postDescripcion": "Posteo 1 de Pepito",
+      "id": "3ac2a9d0-0cc0-4dca-8ec5-c95cc895b293"
+    },
+    {
+      "seen": true,
+      "userName": "Juancito",
+      "profilePic": "perfilPlaceholder",
+      "postImg": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "postDescripcion": "Posteo 1 de Juancito",
+      "id": "f1b9c4dd-c6f8-4f65-80d8-62ad99d4f34e"
+    },
+    {
+      "seen": false,
+      "userName": "Martita",
+      "profilePic": "perfilPlaceholder",
+      "postImg": "https://images.unsplash.com/photo-1615719413546-198b25453f85?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "postDescripcion": "Posteo 1 de Martita",
+      "id": "7f2f60fd-3a7c-4609-8318-6266b71050c8"
+    },
+    {
+      "seen": true,
+      "userName": "Raul",
+      "profilePic": "perfilPlaceholder",
+      "postImg": "https://images.unsplash.com/photo-1595708684082-a173bb3a06c5?q=80&w=2064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "postDescripcion": "Posteo 1 de Raul",
+      "id": "5af2564a-8ff2-4335-9990-bcb4291bb716"
+    },
+    {
+      "seen": true,
+      "userName": "Pepito",
+      "profilePic": "perfilPlaceholder",
+      "postImg": "https://images.unsplash.com/photo-1516697073-419b2bd079db?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "postDescripcion": "Posteo 2 de Pepito",
+      "id": "8bd6d93e-28da-406a-aea1-da03f5c76d14"
+    },
+    {
+      "seen": false,
+      "userName": "Juancito",
+      "profilePic": "perfilPlaceholder",
+      "postImg": "https://images.unsplash.com/photo-1599462620592-8e17c48eed70?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "postDescripcion": "Posteo 2 de Juancito",
+      "id": "9c4da351-b384-4531-ae8b-5f2edbe84e08"
+    },
+    {
+      "seen": true,
+      "userName": "Martita",
+      "profilePic": "perfilPlaceholder",
+      "postImg": "https://images.unsplash.com/photo-1499778003268-cbafc6d08bab?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "postDescripcion": "Posteo 2 de Martita",
+      "id": "72064d76-3bf7-4d03-ba8c-c2e65d5bdfc7"
+    },
+    {
+      "seen": true,
+      "userName": "Raul",
+      "profilePic": "perfilPlaceholder",
+      "postImg": "https://images.unsplash.com/photo-1558138838-6f561719b0ad?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "postDescripcion": "Posteo 2 de Raul",
+      "id": "0e141be7-d735-4a61-8ede-9d924d234d5a"
+    },
+    {
+      "id": "746c86b2-0d64-4651-9f88-2759c3521043",
+      "seen": false,
+      "userName": "Aldana",
+      "profilePic": "/src/assets/michiPerfil.jpg",
+      "postImg": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS",
+      "postDescripcion": "etsetrsdfd test nuevo"
+    },
+    {
+      "id": "91527803-bc94-4149-8b06-00c7f2da6ae0",
+      "seen": false,
+      "userName": "Aldana",
+      "profilePic": "/src/assets/michiPerfil.jpg",
+      "postImg": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS",
+      "postDescripcion": "UPDATE?"
+    },
+    {
+      "id": "022e3f31-70c3-4d93-8b91-47ce2b9cf38f",
+      "seen": false,
+      "userName": "Aldana",
+      "profilePic": "/src/assets/michiPerfil.jpg",
+      "postImg": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS",
+      "postDescripcion": "UpdateULTIMO="
+    },
+    {
+      "id": "276e683f-961c-4f18-9791-8fce7b388a2d",
+      "seen": false,
+      "userName": "Aldana",
+      "profilePic": "/src/assets/michiPerfil.jpg",
+      "postImg": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS",
+      "postDescripcion": "ULTIMO y se actualiza! "
+    }
+  ],
+  "notifications": [
+    {
+      "notificationMessage": "Has recibido un like",
+      "seen": false,
+      "notificationType": "like",
+      "id": "4"
+    },
+    {
+      "notificationMessage": "Has recibido un like",
+      "seen": true,
+      "notificationType": "like",
+      "id": "6"
+    },
+    {
+      "notificationMessage": "Has recibido un like",
+      "seen": false,
+      "notificationType": "like",
+      "id": "8"
+    },
+    {
+      "notificationMessage": "Has recibido un like",
+      "seen": false,
+      "notificationType": "like",
+      "id": "9"
+    },
+    {
+      "notificationMessage": "Has recibido un like",
+      "seen": false,
+      "notificationType": "like",
+      "id": "11"
+    },
+    {
+      "notificationMessage": "Has recibido un like",
+      "seen": false,
+      "notificationType": "like",
+      "id": "16"
+    },
+    {
+      "notificationMessage": "Has recibido un like",
+      "seen": false,
+      "notificationType": "like",
+      "id": "19"
+    },
+    {
+      "notificationMessage": "Has recibido un like",
+      "seen": false,
+      "notificationType": "like",
+      "id": "25"
+    },
+    {
+      "notificationMessage": "Pepito te está siguiendo",
+      "seen": false,
+      "notificationType": "follow",
+      "id": "26"
+    }
+  ]
+}
